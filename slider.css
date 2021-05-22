@@ -1,0 +1,89 @@
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10vh;
+	background-color: #707070;
+}
+
+.slider-container {
+	width: 100%;
+	height: 400px;
+	box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.29);
+	overflow: hidden;
+	position: relative;
+}
+
+.slider {
+	display: flex;
+	flex-direction: row;
+	transition: all 1s;
+}
+
+.slider-dot-container {
+	position: absolute;
+	width: 100%;
+	bottom: 16px;
+	text-align: center;
+}
+
+.slider-dot {
+	margin-left:5px ;
+	margin-right:5px ;
+	width: 16px ;
+	height: 16px ;
+	border-radius:50px ;
+	background-color:white;
+	display: inline-block;
+	transition: all 1s;
+	border: 3px solid #202020;
+}
+
+.slider-dot-active {
+	background-color: #202020;
+	border-color: white;
+}
+
+.slide {
+	display: flex;
+}
+
+.slide img {
+	width: 100%;
+}
+
+.slider-button {
+	display: flex;
+	position: absolute;
+	width: 40px;
+	height: 100%;
+	top: 0;
+	font-size: 36px;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-weight: bold;
+}
+
+.slider-button i {
+	-webkit-text-stroke: 3px black;
+}
+
+.slider-prev-button {
+	left: 4px;
+}
+
+.slider-next-button {
+	right: 4px;
+}
+
+@media screen and (max-width: 720px) {
+	.slider-container {
+		height: 200px;
+	}
+}
